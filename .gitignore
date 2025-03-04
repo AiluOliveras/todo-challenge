@@ -1,0 +1,10 @@
+todochallenge/settings.py
+todochallenge/__pycache__
+*.pyc
+.envrc
+venv/
+.vscode
+todo/
+db/
+docker-compose.yml
+accesos_y_errores.log

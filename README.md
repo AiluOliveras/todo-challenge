@@ -1,3 +1,37 @@
+# ToDo-List Challenge
+Este proyecto fué desarrollado por Ailén Oliveras en Febrero 2025.
+
+## Servicios disponibles
+* Crear una tarea --> /tareas/crear (POST)
+* Listado de tareas --> /tareas/ (GET)
+* Filtrar listado de tareas --> /tareas/?descripcion=<str>&titulo=<str>&completada=<bool> (GET)
+* Filtrar listado de tareas según fecha de creación --> /tareas/?created_at=<fecha yyyy-mm-dd> (GET)
+* Filtrar listado de tareas según rango de fechas --> /tareas/?created_at__desde=<fecha yyyy-mm-dd>&created_at__hasta=<fecha yyyy-mm-dd> (GET)
+* Marcar tarea como completa --> /tareas/<id>/marcar_completada (POST)
+* Marcar tarea como incompleta --> /tareas/<id>/marcar_incompleta (POST)
+* Eliminar tarea --> /tareas/<id> (DELETE)
+
+* Obtener tokens de logueo--> /api/token/ (+ parámetros user y password en el body)
+
+## Otras funcionalidades del sistema
+* Proyecto dockerizado
+* Tests unitarios e integrales (Pueden provarse con el comando: python3 manage.py test)
+* Manejo de logs con accesos y errores (Se pueden visualizar en el archivo accesos_y_errores.log en la carpeta del sistema)
+
+## Guía general de instalación
+1- Crear carpeta que contenga el proyecto.
+2- Crear entorno virtual y ejecutarlo.
+3- Descargar proyecto desde GIT.
+4- Crear base de datos, recomendado llamarle "todochallenge" para facilitar la configuración. Activar servicio mysql.
+5- Configurar archivo settings.
+6- Instalar requirements.txt.
+7- Ejecutar proyecto.
+
+## Otras aclaraciones
+* Los archivos settings-base.py y docker-compose-base.py son plantillas para configurar el sistema. Deben modificarse incluyendo las credenciales de la base de datos locales, puertos preferidos, keys personales, etc. Previamente a definir estos datos, puede crearse una copia de estos archivos sin el "-base" para preservar la configuración elegida localmente.
+
+---
+
 # Invera ToDo-List Challenge (Python/Django Jr-SSr)
 
 El propósito de esta prueba es conocer tu capacidad para crear una pequeña aplicación funcional en un límite de tiempo. A continuación, encontrarás las funciones, los requisitos y los puntos clave que debés tener en cuenta durante el desarrollo.
